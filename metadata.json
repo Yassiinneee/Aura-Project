@@ -1,0 +1,6 @@
+{
+  "name": "Aura & Co. Boutique",
+  "description": "A curated modern e-commerce storefront featuring minimalist home goods, tech accessories, and apparel with an AI shopping concierge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
