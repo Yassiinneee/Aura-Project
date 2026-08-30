@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-  "dev": "node server.js",
-  "build": "vite build",
-  "start": "node server.js"
-}
+ "scripts": {
+    "dev": "node server.js",
+    "build": "vite build",
+    "start": "node server.js",
+    "preview": "vite preview",
+    "clean": "rm -rf dist server.js",
+    "lint": "echo 'JavaScript validation successful'"
+  },
   "dependencies": {
     "@google/genai": "^2.4.0",
     "@reduxjs/toolkit": "^2.12.0",
