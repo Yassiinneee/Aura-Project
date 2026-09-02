@@ -2,22 +2,32 @@
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19">
 <img src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+<img src="https://img.shields.io/badge/JavaScript-ES2024-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
 <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
 <img src="https://img.shields.io/badge/Express.js-4.x-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js">
 <img src="https://img.shields.io/badge/MongoDB-9.7-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-<img src="https://img.shields.io/badge/Redux%20Toolkit-State%20Management-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux Toolkit">
-<img src="https://img.shields.io/badge/Socket.IO-Real--Time-010101?style=for-the-badge&logo=socket.io&logoColor=white" alt="Socket.IO">
-<img src="https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini">
+<img src="https://img.shields.io/badge/Mongoose-9.7-880000?style=for-the-badge&logo=mongoose&logoColor=white" alt="Mongoose">
+<img src="https://img.shields.io/badge/Redux%20Toolkit-2.12-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux Toolkit">
 <img src="https://img.shields.io/badge/TailwindCSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
+<img src="https://img.shields.io/badge/Socket.IO-4.8-010101?style=for-the-badge&logo=socket.io&logoColor=white" alt="Socket.IO">
+<img src="https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini">
+<img src="https://img.shields.io/badge/JWT-Authentication-orange?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT">
+<img src="https://img.shields.io/badge/bcrypt-Password%20Hashing-003B57?style=for-the-badge" alt="bcrypt">
 <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+
+<br>
+
+<img src="https://img.shields.io/badge/Frontend-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+<img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" alt="Render">
+<img src="https://img.shields.io/badge/Database-MongoDB%20Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Atlas">
 
 <br><br>
 
-**A modern, full-stack AI-powered e-commerce platform for curated lifestyle products.**
+**A modern full-stack AI-powered e-commerce platform for a premium boutique shopping experience.**
 
-A production-oriented boutique storefront combining modern UI/UX, intelligent product discovery, secure authentication, real-time notifications, inventory management, order processing, analytics, and an AI shopping concierge.
+**Discover · Personalize · Shop · Connect**
 
 </div>
 
@@ -27,29 +37,39 @@ A production-oriented boutique storefront combining modern UI/UX, intelligent pr
 
 * [Overview](#-overview)
 * [Project Objectives](#-project-objectives)
-* [Key Features](#-key-features)
+* [Core Features](#-core-features)
 * [Application Architecture](#-application-architecture)
 * [Technology Stack](#-technology-stack)
 * [Project Structure](#-project-structure)
-* [Frontend](#-frontend)
-* [Backend](#-backend)
+* [Frontend Architecture](#-frontend-architecture)
+* [Backend Architecture](#-backend-architecture)
 * [Authentication & Authorization](#-authentication--authorization)
 * [AI Shopping Concierge](#-ai-shopping-concierge)
 * [Real-Time Communication](#-real-time-communication)
-* [E-Commerce Features](#-e-commerce-features)
-* [Administration](#-administration)
+* [E-Commerce Functionality](#-e-commerce-functionality)
+* [Inventory Management](#-inventory-management)
+* [Order Management](#-order-management)
+* [Wishlist](#-wishlist)
+* [Reviews & Moderation](#-reviews--moderation)
+* [Coupons](#-coupons)
+* [Notifications](#-notifications)
+* [Email & Invoices](#-email--invoices)
+* [Administration & Analytics](#-administration--analytics)
 * [Security](#-security)
-* [Database Design](#-database-design)
-* [API Overview](#-api-overview)
+* [Database Architecture](#-database-architecture)
+* [API Architecture](#-api-architecture)
 * [Environment Variables](#-environment-variables)
 * [Installation](#-installation)
-* [Running the Application](#-running-the-application)
-* [Docker Deployment](#-docker-deployment)
-* [Render Deployment](#-render-deployment)
+* [Running Locally](#-running-locally)
+* [Docker](#-docker)
+* [Deployment](#-deployment)
 * [Vercel Deployment](#-vercel-deployment)
-* [Production Considerations](#-production-considerations)
+* [Render Deployment](#-render-deployment)
+* [MongoDB Atlas](#-mongodb-atlas)
+* [Production Configuration](#-production-configuration)
 * [Development Workflow](#-development-workflow)
 * [Future Improvements](#-future-improvements)
+* [Project Highlights](#-project-highlights)
 * [Author](#-author)
 * [License](#-license)
 
@@ -57,17 +77,44 @@ A production-oriented boutique storefront combining modern UI/UX, intelligent pr
 
 # 🌟 Overview
 
-**Aura & Co. Boutique** is a full-stack e-commerce application designed around a premium, minimalist shopping experience.
+**Aura & Co. Boutique** is a full-stack e-commerce platform designed to deliver a premium, modern and interactive shopping experience.
 
-The platform provides customers with a complete digital shopping journey:
+The application combines a responsive React frontend with a Node.js/Express backend, MongoDB persistence, JWT authentication, Socket.IO real-time communication, and Google Gemini artificial intelligence.
 
-> **Discover → Explore → Personalize → Add to Cart → Checkout → Track Orders → Receive Notifications**
+The platform provides both **customer-facing shopping functionality** and a dedicated **administrative management layer**.
 
-The application combines a modern React frontend with a Node.js/Express backend, MongoDB persistence, Socket.IO real-time communication, JWT authentication, and Google Gemini-powered AI assistance.
+### Platform Vision
 
-The architecture is designed to support both **customer-facing commerce operations** and **administrative business workflows**.
+Aura is built around three major principles:
+
+* 🛍️ **Premium E-Commerce Experience**
+* 🤖 **AI-Assisted Product Discovery**
+* 🔐 **Security-Conscious Full-Stack Architecture**
+
+The platform is designed to provide a complete shopping lifecycle:
+
+```text
+Discover
+   ↓
+Search & Filter
+   ↓
+Product Details
+   ↓
+AI Recommendations
+   ↓
+Wishlist / Cart
+   ↓
+Checkout
+   ↓
+Order
+   ↓
+Real-Time Notifications
+   ↓
+Order Tracking
+```
 
 ---
+
 # 🌐 Live Demo
 
 The Aura Boutique e-commerce platform is deployed and publicly accessible through Vercel.
@@ -76,50 +123,50 @@ The Aura Boutique e-commerce platform is deployed and publicly accessible throug
 
 👉 https://aura-projectt-nine.vercel.app/
 
----
-
-### Core Concept
-
-Aura & Co. focuses on three main pillars:
-
-* 🛍️ **Modern E-Commerce**
-* 🤖 **AI-Assisted Shopping**
-* 🔐 **Secure & Scalable Backend Architecture**
 
 ---
 
 # 🎯 Project Objectives
 
-The project was developed with the following objectives:
+The main objectives of Aura & Co. Boutique are:
 
-1. Build a complete modern e-commerce experience.
-2. Provide intuitive product discovery and filtering.
-3. Implement authentication and role-based authorization.
-4. Introduce an AI shopping assistant using Google Gemini.
-5. Provide real-time notifications using Socket.IO.
-6. Implement shopping cart, wishlist, orders, reviews and checkout workflows.
-7. Provide inventory and stock management.
-8. Provide administrative analytics and audit logging.
-9. Implement API protection using rate limiting and validation.
-10. Support containerized deployment with Docker.
-11. Provide deployment configurations for cloud hosting.
-12. Maintain a modular and maintainable full-stack architecture.
+1. Build a complete modern e-commerce application.
+2. Develop a responsive and interactive user interface.
+3. Implement secure user authentication.
+4. Implement role-based authorization.
+5. Provide product search and filtering.
+6. Provide shopping cart and wishlist functionality.
+7. Implement product reviews and moderation.
+8. Implement inventory and stock management.
+9. Implement coupon management.
+10. Implement order and checkout workflows.
+11. Integrate Google Gemini as an AI shopping assistant.
+12. Implement real-time notifications using Socket.IO.
+13. Generate order invoices.
+14. Implement administrative analytics.
+15. Maintain audit logs for sensitive operations.
+16. Protect APIs using validation and rate limiting.
+17. Support Docker-based development and deployment.
+18. Support Vercel frontend deployment.
+19. Support Render backend deployment.
+20. Use MongoDB/MongoDB Atlas as the persistence layer.
 
 ---
 
-# 🚀 Key Features
+# 🚀 Core Features
 
-## 🛒 Customer Experience
+## 👤 Customer Features
 
-* Modern responsive storefront
-* Product catalog
-* Product categories
+* User registration
+* User login
+* JWT authentication
+* Product browsing
 * Product search
-* Advanced filtering
+* Category filtering
 * Price filtering
 * Rating filtering
 * Stock filtering
-* Sorting
+* Product sorting
 * Product details
 * Product variants
 * Shopping cart
@@ -128,56 +175,42 @@ The project was developed with the following objectives:
 * Checkout
 * Order creation
 * Order history
-* Invoice generation
-* Order status tracking
-* Delivery options
+* Invoice access
 * Notifications
+* Order status updates
+* AI shopping assistant
 
 ---
 
-## 🤖 AI Shopping Concierge
+## 🤖 AI Features
 
-Aura integrates an AI-powered shopping assistant based on **Google Gemini**.
+* Gemini-powered shopping assistant
+* Natural-language product discovery
+* Product recommendations
+* Customer questions
+* AI-assisted shopping experience
+* Backend-protected Gemini API key
+* Dedicated AI rate limiting
 
-The assistant is designed to help customers:
+---
 
-* Discover products
-* Ask product-related questions
-* Receive recommendations
-* Navigate the catalog
-* Find suitable products
-* Interact with the store conversationally
+## 👨‍💼 Administrative Features
 
-The AI layer is exposed through a dedicated backend API instead of exposing the Gemini API key directly in the browser.
-
-### AI Architecture
-
-```text
-Customer
-   │
-   ▼
-React AI Assistant
-   │
-   ▼
-Axios API Request
-   │
-   ▼
-Express API
-   │
-   ▼
-AI Controller
-   │
-   ▼
-Google Gemini API
-   │
-   ▼
-AI Response
-   │
-   ▼
-Customer
-```
-
-AI requests are additionally protected by a dedicated rate limiter to control API consumption and reduce abuse.
+* Product management
+* Category management
+* User management
+* Role management
+* Order management
+* Inventory management
+* Stock adjustments
+* Stock movement history
+* Coupon management
+* Review moderation
+* Analytics
+* Audit logging
+* Notification management
+* Email administration
+* Upload management
 
 ---
 
@@ -186,73 +219,82 @@ AI requests are additionally protected by a dedicated rate limiter to control AP
 Aura follows a modular full-stack architecture.
 
 ```text
-┌─────────────────────────────────────────────┐
-│                 Client                      │
-│                                             │
-│ React + Vite + TailwindCSS                  │
-│ Redux Toolkit + RTK Query                   │
-│ Socket.IO Client                            │
-│ Motion / Lucide React                       │
-└──────────────────────┬──────────────────────┘
-                       │
-                       │ REST API / WebSocket
-                       ▼
-┌─────────────────────────────────────────────┐
-│                 Server                      │
-│                                             │
-│ Node.js + Express.js                       │
-│ Authentication                              │
-│ Controllers                                 │
-│ Middleware                                  │
-│ Services                                    │
-│ Socket.IO                                   │
-│ AI Integration                              │
-└──────────────────────┬──────────────────────┘
-                       │
-              ┌────────┴────────┐
-              ▼                 ▼
-       ┌─────────────┐   ┌──────────────┐
-       │  MongoDB    │   │ Google       │
-       │  Database   │   │ Gemini API   │
-       └─────────────┘   └──────────────┘
+                         ┌─────────────────────┐
+                         │      Customer       │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │   React Frontend    │
+                         │      + Vite         │
+                         └──────────┬──────────┘
+                                    │
+                     REST API / WebSocket
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │   Express Backend   │
+                         │      Node.js        │
+                         └──────────┬──────────┘
+                                    │
+              ┌─────────────────────┼─────────────────────┐
+              │                     │                     │
+              ▼                     ▼                     ▼
+       ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+       │  MongoDB    │      │ Gemini API  │      │ Socket.IO   │
+       │  Database   │      │     AI      │      │ Real-Time   │
+       └─────────────┘      └─────────────┘      └─────────────┘
 ```
 
 ---
 
-# 💻 Technology Stack
+# 🧰 Technology Stack
 
 ## Frontend
 
-| Technology       | Purpose                       |
-| ---------------- | ----------------------------- |
-| React 19         | UI development                |
-| Vite             | Development/build tooling     |
-| Tailwind CSS 4   | Styling                       |
-| Redux Toolkit    | Global state management       |
-| RTK Query        | API data fetching and caching |
-| Axios            | HTTP communication            |
-| Socket.IO Client | Real-time communication       |
-| Motion           | Animations                    |
-| Lucide React     | UI icons                      |
+| Technology       | Version / Role |
+| ---------------- | -------------- |
+| React            | 19             |
+| Vite             | 6              |
+| JavaScript       | ES Modules     |
+| Tailwind CSS     | 4              |
+| Redux Toolkit    | 2.12           |
+| React Redux      | 9.3            |
+| Axios            | 1.19           |
+| Socket.IO Client | 4.8            |
+| Motion           | 12             |
+| Lucide React     | UI icons       |
 
 ---
 
 ## Backend
 
-| Technology         | Purpose                   |
-| ------------------ | ------------------------- |
-| Node.js            | Runtime                   |
-| Express.js         | REST API                  |
-| MongoDB            | Database                  |
-| Mongoose           | ODM                       |
-| JWT                | Authentication            |
-| bcryptjs           | Password hashing          |
-| Socket.IO          | Real-time communication   |
-| express-rate-limit | API protection            |
-| express-validator  | Input validation          |
-| CORS               | Cross-origin access       |
-| dotenv             | Environment configuration |
-| Google GenAI       | AI integration            |
+| Technology         | Purpose                    |
+| ------------------ | -------------------------- |
+| Node.js            | JavaScript runtime         |
+| Express.js         | REST API                   |
+| MongoDB            | Database                   |
+| Mongoose           | MongoDB ODM                |
+| JWT                | Authentication             |
+| bcryptjs           | Password hashing           |
+| Socket.IO          | Real-time communication    |
+| express-rate-limit | Rate limiting              |
+| express-validator  | Request validation         |
+| CORS               | Cross-origin communication |
+| dotenv             | Environment configuration  |
+| Google GenAI       | Gemini integration         |
+
+---
+
+## DevOps & Deployment
+
+| Technology     | Purpose                     |
+| -------------- | --------------------------- |
+| Docker         | Containerization            |
+| Docker Compose | Multi-container development |
+| Vercel         | Frontend deployment         |
+| Render         | Backend deployment          |
+| MongoDB Atlas  | Cloud database              |
 
 ---
 
@@ -312,6 +354,7 @@ Aura-Project-main/
 │   │   ├── couponController.js
 │   │   ├── deliveryController.js
 │   │   ├── emailController.js
+│   │   ├── index.js
 │   │   ├── inventoryController.js
 │   │   ├── notificationController.js
 │   │   ├── orderController.js
@@ -323,7 +366,8 @@ Aura-Project-main/
 │   ├── middlewares/
 │   │   ├── authMiddleware.js
 │   │   ├── rateLimiter.js
-│   │   └── validators.js
+│   │   ├── validators.js
+│   │   └── index.js
 │   │
 │   ├── models/
 │   │   ├── AuditLog.js
@@ -335,7 +379,8 @@ Aura-Project-main/
 │   │   ├── Product.js
 │   │   ├── StockMovement.js
 │   │   ├── User.js
-│   │   └── Wishlist.js
+│   │   ├── Wishlist.js
+│   │   └── index.js
 │   │
 │   ├── routes/
 │   │   ├── aiRoutes.js
@@ -357,6 +402,7 @@ Aura-Project-main/
 │   ├── services/
 │   │   ├── auditService.js
 │   │   ├── emailService.js
+│   │   ├── index.js
 │   │   ├── paymentService.js
 │   │   └── pdfService.js
 │   │
@@ -365,87 +411,141 @@ Aura-Project-main/
 │       └── socketHandler.js
 │
 ├── server.js
-├── docker-compose.yml
-├── render.yaml
 ├── package.json
 ├── package-lock.json
 ├── bun.lock
+├── docker-compose.yml
+├── render.yaml
+├── vercel.json
+├── vite.config.js
+├── metadata.json
 ├── .dockerignore
 └── .gitignore
 ```
 
 ---
 
-# 🎨 Frontend
+# 🎨 Frontend Architecture
 
-The frontend is implemented using **React 19 + Vite**.
+The frontend is built with **React 19 and Vite**.
 
-The application uses a component-oriented architecture where each major business feature is encapsulated in its own component.
+The application follows a component-based architecture.
 
-### Main UI Components
+### Main Components
 
-* `Navbar` — global navigation
-* `HeroBanner` — storefront introduction
-* `ProductCard` — product presentation
-* `ProductModal` — detailed product interaction
-* `CartDrawer` — shopping cart
-* `CheckoutModal` — checkout workflow
-* `OrdersModal` — customer order history
-* `WishlistModal` — wishlist management
-* `ReviewModal` — product reviews
-* `AuthModal` — authentication
-* `AdminModal` — administration interface
-* `AiAssistant` — AI shopping concierge
-* `NotificationCenter` — notifications
-* `Footer` — application footer
-
-### Product Discovery
-
-The storefront supports URL-synchronized filters.
-
-Example:
-
-```text
-/?category=electronics&q=headphones&sort=price-asc&minPrice=20&maxPrice=200&inStock=true
-```
-
-This provides shareable and bookmarkable catalog states.
+| Component            | Responsibility          |
+| -------------------- | ----------------------- |
+| `Navbar`             | Navigation              |
+| `HeroBanner`         | Storefront hero section |
+| `ProductCard`        | Product preview         |
+| `ProductModal`       | Product details         |
+| `CartDrawer`         | Shopping cart           |
+| `CheckoutModal`      | Checkout                |
+| `OrdersModal`        | Order history           |
+| `WishlistModal`      | Wishlist                |
+| `ReviewModal`        | Product reviews         |
+| `AuthModal`          | Authentication          |
+| `AiAssistant`        | Gemini AI assistant     |
+| `AdminModal`         | Admin interface         |
+| `NotificationCenter` | Notifications           |
+| `OrderSuccessModal`  | Order confirmation      |
+| `Footer`             | Application footer      |
 
 ---
 
 # 🔄 State Management
 
-Aura uses **Redux Toolkit** and **RTK Query** for application state and server-state management.
+Aura uses **Redux Toolkit** for application state management.
+
+The main Redux files are:
 
 ```text
-React Components
-       │
-       ▼
-Redux Store
-       │
-       ├── RTK Query
-       │      │
-       │      └── API Requests
-       │
-       └── Application State
+Client/store/store.js
+Client/store/apiSlice.js
 ```
 
-RTK Query provides:
+The architecture separates:
 
-* API request handling
-* Query caching
-* Automatic loading states
-* Data synchronization
-* Refetching
-* API state management
+* Global application state
+* API state
+* Cached server data
+* UI state
+
+### Data Flow
+
+```text
+React Component
+      │
+      ▼
+Redux / RTK Query
+      │
+      ▼
+Axios / API Layer
+      │
+      ▼
+Express REST API
+      │
+      ▼
+MongoDB
+```
+
+---
+
+# 🔧 Backend Architecture
+
+The backend follows a modular structure:
+
+```text
+Routes
+  ↓
+Middleware
+  ↓
+Controllers
+  ↓
+Services
+  ↓
+Models
+  ↓
+MongoDB
+```
+
+### Controllers
+
+Controllers contain request-handling logic.
+
+Examples:
+
+```text
+authController.js
+productController.js
+orderController.js
+inventoryController.js
+aiController.js
+analyticsController.js
+```
+
+### Services
+
+Business logic that requires reusable processing is separated into services.
+
+Examples:
+
+```text
+auditService.js
+emailService.js
+paymentService.js
+pdfService.js
+```
+
+### Models
+
+Mongoose models represent the application's data domains.
 
 ---
 
 # 🔐 Authentication & Authorization
 
-Authentication is implemented using **JSON Web Tokens (JWT)**.
-
-The backend provides different authorization levels.
+Authentication uses **JSON Web Tokens (JWT)**.
 
 ### Authentication Flow
 
@@ -453,10 +553,10 @@ The backend provides different authorization levels.
 User
  │
  ▼
-Login / Register
+Register / Login
  │
  ▼
-Express Auth Controller
+Authentication Controller
  │
  ▼
 Password Verification
@@ -468,199 +568,140 @@ JWT Generation
 Client
  │
  ▼
-Authorization Header
+Authorization
  │
  ▼
 JWT Middleware
  │
  ▼
-Protected Resource
+Protected Route
 ```
 
-### Authorization Levels
-
-#### Guest
-
-Can access public storefront functionality.
-
-#### Authenticated User
-
-Can access features such as:
-
-* Orders
-* Wishlist
-* Notifications
-* Personalized functionality
-* Reviews
-
-#### Administrator
-
-Can access:
-
-* Product management
-* User management
-* Inventory
-* Coupons
-* Orders
-* Analytics
-* Audit logs
-* Email administration
-* Review moderation
+Passwords are hashed using `bcryptjs`.
 
 ---
 
-# 🛡️ Security
+## 👥 Authorization Roles
 
-Security is treated as a first-class concern throughout the application.
+The application supports role-based access control.
 
-## JWT Authentication
+### Customer
 
-Protected routes validate JWT tokens before allowing access.
+Can:
+
+* Browse products
+* Manage cart
+* Manage wishlist
+* Create orders
+* Submit reviews
+* Receive notifications
+
+### Administrator
+
+Can additionally:
+
+* Manage products
+* Manage users
+* Manage orders
+* Manage inventory
+* Manage coupons
+* Moderate reviews
+* Access analytics
+* Access audit logs
+
+---
+
+# 🤖 AI Shopping Concierge
+
+Aura integrates **Google Gemini** through the backend.
+
+The AI assistant is exposed through the frontend as:
 
 ```text
-Authorization: Bearer <JWT>
+AiAssistant.jsx
 ```
 
----
-
-## Password Protection
-
-Passwords are hashed using:
+The backend integration is implemented through:
 
 ```text
-bcryptjs
+server/controllers/aiController.js
+server/routes/aiRoutes.js
 ```
 
-Plain-text passwords are not intended to be stored in the database.
-
----
-
-## Role-Based Access Control
-
-Administrative operations require an administrator role.
+### AI Request Flow
 
 ```text
-requireAdmin()
-      │
-      ▼
-JWT Verification
-      │
-      ▼
-Role Verification
-      │
-      ├── admin → Allow
-      │
-      └── user → Deny
+Customer
+   │
+   ▼
+AiAssistant
+   │
+   ▼
+Backend /api/ai
+   │
+   ▼
+AI Controller
+   │
+   ▼
+Google Gemini
+   │
+   ▼
+AI Response
+   │
+   ▼
+Customer
 ```
 
----
+### Security Principle
 
-## Rate Limiting
-
-The project implements multiple rate-limiting layers.
-
-| Area           |                  Limit |
-| -------------- | ---------------------: |
-| General API    | 1500 requests / 15 min |
-| Authentication |  150 attempts / 15 min |
-| AI Assistant   |      25 requests / min |
-| Orders         |     30 orders / 15 min |
-| Reviews        |    20 reviews / 10 min |
-| Uploads        |    50 uploads / 15 min |
-
-This provides protection against:
-
-* Brute-force authentication attempts
-* API abuse
-* Excessive AI requests
-* Review spam
-* Order abuse
-* Upload abuse
-
----
-
-## Input Validation
-
-Backend requests are validated using:
+The Gemini API key should remain on the server.
 
 ```text
-express-validator
+❌ React → Gemini API directly
+
+✅ React → Backend → Gemini API
 ```
 
-Validation is applied to important business operations such as:
-
-* Authentication
-* Products
-* Orders
-* Reviews
-* Coupons
-* Inventory
-* Uploads
-* Order status updates
-
----
-
-## CORS
-
-Cross-Origin Resource Sharing is configured to support frontend/backend separation.
-
-The architecture supports deployments such as:
-
-```text
-Vercel Frontend
-       │
-       ▼
-Render Backend
-       │
-       ▼
-MongoDB Atlas
-```
-
----
-
-## Correlation IDs
-
-Requests receive correlation identifiers for traceability.
-
-```text
-X-Correlation-ID
-```
-
-This makes it easier to associate requests with audit events and troubleshoot distributed application behavior.
+This prevents exposing the API secret in the client bundle.
 
 ---
 
 # ⚡ Real-Time Communication
 
-Aura uses **Socket.IO** for real-time application events.
+Aura uses **Socket.IO** to support real-time functionality.
 
-### Supported Concepts
-
-* User-specific rooms
-* Admin rooms
-* Order rooms
-* Real-time notifications
-* Order status updates
-* Inventory alerts
-
-### Socket Architecture
+Socket-related files:
 
 ```text
-                    Socket.IO
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-       User Room    Order Room   Admin Room
-          │            │            │
-          ▼            ▼            ▼
-     Notifications  Order Events  Alerts
+server/websockets/index.js
+server/websockets/socketHandler.js
+Client/utils/socket.js
 ```
 
-The socket layer also supports JWT-based authentication.
+Real-time communication can be used for:
+
+* Notifications
+* Order updates
+* Administrative events
+* Inventory events
+* User-specific events
+
+### Real-Time Architecture
+
+```text
+                 Socket.IO
+                     │
+        ┌────────────┼────────────┐
+        ▼            ▼            ▼
+     User Room   Order Room   Admin Room
+        │            │            │
+        ▼            ▼            ▼
+ Notifications  Order Events   Alerts
+```
 
 ---
 
-# 🛍️ E-Commerce Features
+# 🛍️ E-Commerce Functionality
 
 ## Product Catalog
 
@@ -673,215 +714,444 @@ Customers can:
 * Filter by rating
 * Filter by availability
 * Sort products
-* Open detailed product information
+* View detailed product information
 
 ---
 
-## Shopping Cart
+## 🔎 Product Filtering
 
-The cart supports:
-
-* Adding products
-* Product variants
-* Quantity changes
-* Removing products
-* Automatic cart totals
-* User-specific persistence
-
-Cart data is scoped by user email in local browser storage.
-
----
-
-## Wishlist
-
-Users can:
-
-* Add products to wishlist
-* Remove products
-* View saved products
-
----
-
-## Product Reviews
-
-The review system supports:
-
-* Review submission
-* Rating
-* Review retrieval
-* Review moderation
-* Review rate limiting
-
-Administrators can moderate reviews.
-
----
-
-# 📦 Orders & Checkout
-
-The platform provides a complete order workflow.
+The storefront supports multiple product discovery criteria:
 
 ```text
-Shopping Cart
-      │
-      ▼
-Checkout
-      │
-      ▼
-Customer Information
-      │
-      ▼
-Delivery Selection
-      │
-      ▼
-Payment Simulation
-      │
-      ▼
-Order Creation
-      │
-      ▼
-Confirmation
-      │
-      ▼
-Real-Time Status Updates
+Category
+Search
+Price
+Rating
+Stock
+Sorting
 ```
 
-Customers can view their previous orders and access invoice information.
+This allows customers to quickly narrow the catalog to relevant products.
 
 ---
 
-# 💳 Payment Simulation
+# 🛒 Shopping Cart
 
-The project includes a payment simulation service for development and demonstration purposes.
+The shopping cart provides:
 
-Supported payment concepts include:
+* Product addition
+* Quantity modification
+* Product removal
+* Variant handling
+* Cart totals
+* User-specific persistence
 
-* Card
-* PayPal
-* Apple Pay
+The main interface is:
 
-The payment simulation intentionally avoids persisting full card numbers or CVV information.
-
-> **Important:** This implementation is a simulation and should not be considered a production payment processor. Production systems should integrate a PCI-compliant payment provider such as Stripe, Adyen, or another appropriate provider.
-
----
-
-# 📧 Email System
-
-The backend contains an email service architecture supporting templates such as:
-
-* Order confirmation
-* Order status updates
-
-Email records can also be managed through administrative endpoints.
-
-The system provides retry functionality for failed email delivery workflows.
+```text
+CartDrawer.jsx
+```
 
 ---
 
-# 📄 Invoice Generation
+# ❤️ Wishlist
 
-Aura includes an invoice generation service capable of producing invoice HTML for orders.
+Users can save products for later.
 
-Invoice information can include:
+Features include:
 
-* Customer information
-* Order identifier
-* Products
-* Quantities
-* Unit prices
-* Line totals
-* Delivery information
-* Order totals
+* Add product
+* Remove product
+* View saved products
+* User-specific wishlist persistence
+
+Backend components:
+
+```text
+wishlistController.js
+wishlistRoutes.js
+Wishlist.js
+```
 
 ---
 
-# 📊 Administration
+# ⭐ Reviews & Moderation
 
-The administrative layer provides business-management functionality.
+The platform provides a product review system.
 
-## Admin Capabilities
+Customers can:
 
-### User Management
+* Submit reviews
+* Provide ratings
+* View product reviews
 
 Administrators can:
 
-* View users
-* Update user roles
-* Manage user status
-
-### Product Management
-
-Administrators can:
-
-* Create products
-* Update products
-* Delete products
 * Moderate reviews
+* Manage inappropriate content
 
-### Inventory Management
+Review operations are protected with validation and rate limiting.
 
-Administrators can:
+---
 
-* View inventory summaries
-* Identify low-stock products
-* Adjust stock
-* Review stock movements
+# 📦 Inventory Management
 
-### Coupon Management
+Aura includes dedicated inventory functionality.
+
+The inventory system supports:
+
+* Stock tracking
+* Stock adjustments
+* Low-stock monitoring
+* Stock movement records
+* Inventory summaries
+
+Relevant backend components:
+
+```text
+inventoryController.js
+inventoryRoutes.js
+StockMovement.js
+```
+
+### Inventory Flow
+
+```text
+Product
+   │
+   ▼
+Inventory
+   │
+   ├── Stock Increase
+   ├── Stock Decrease
+   └── Stock Adjustment
+          │
+          ▼
+    Stock Movement
+```
+
+---
+
+# 📋 Order Management
+
+The platform provides a complete order lifecycle.
+
+```text
+Cart
+ │
+ ▼
+Checkout
+ │
+ ▼
+Delivery Selection
+ │
+ ▼
+Payment Processing
+ │
+ ▼
+Order Creation
+ │
+ ▼
+Confirmation
+ │
+ ▼
+Order Tracking
+```
+
+Customers can access:
+
+* Current orders
+* Previous orders
+* Order details
+* Order status
+* Invoice information
+
+Administrators can manage order statuses.
+
+---
+
+# 💳 Payment Service
+
+The backend contains a dedicated payment service:
+
+```text
+server/services/paymentService.js
+server/controllers/paymentController.js
+server/routes/paymentRoutes.js
+```
+
+The project architecture separates payment processing from order business logic.
+
+> **Production note:** Any simulated or development payment workflow should be replaced with a PCI-compliant provider before commercial deployment.
+
+---
+
+# 🎟️ Coupons
+
+Aura includes coupon management.
 
 Administrators can:
 
 * Create coupons
 * Validate coupons
 * Delete coupons
+* Manage discount rules
 
-### Order Management
+Relevant components:
 
-Administrators can:
+```text
+couponController.js
+couponRoutes.js
+Coupon.js
+```
 
-* View all orders
-* Update order status
-* Monitor order activity
+---
+
+# 🔔 Notifications
+
+The application includes a notification system.
+
+Customers can:
+
+* Receive notifications
+* View notifications
+* Mark notifications as read
+* Clear notifications
+
+Relevant components:
+
+```text
+Notification.js
+notificationController.js
+notificationRoutes.js
+NotificationCenter.jsx
+```
+
+Socket.IO can be used to deliver real-time events.
+
+---
+
+# 📧 Email & Invoices
+
+The backend includes an email service and PDF/invoice service.
+
+### Email
+
+```text
+server/services/emailService.js
+server/controllers/emailController.js
+server/routes/emailRoutes.js
+```
+
+The architecture supports transactional email workflows such as:
+
+* Order confirmation
+* Order updates
+* Administrative email operations
+
+### Invoice
+
+```text
+server/services/pdfService.js
+```
+
+Invoices can contain:
+
+* Customer details
+* Order identifier
+* Products
+* Quantities
+* Prices
+* Delivery information
+* Order totals
+
+---
+
+# 📊 Administration & Analytics
+
+Aura includes an administrative management layer.
+
+### Administration Areas
+
+```text
+Users
+Products
+Categories
+Orders
+Inventory
+Coupons
+Reviews
+Notifications
+Emails
+Analytics
+Audit Logs
+```
 
 ### Analytics
 
-The backend exposes administrative analytics through:
+Analytics functionality is implemented through:
 
 ```text
-GET /api/admin/analytics
+analyticsController.js
 ```
 
-### Audit Logging
+It can be used to provide business-level insights such as:
 
-Administrative activity can be recorded with:
+* Orders
+* Revenue
+* Product activity
+* Inventory information
+* Customer activity
+
+---
+
+# 🧾 Audit Logging
+
+Sensitive administrative actions can be recorded through the audit system.
+
+Relevant files:
+
+```text
+server/models/AuditLog.js
+server/services/auditService.js
+server/controllers/auditController.js
+server/routes/auditRoutes.js
+```
+
+Audit information can include:
 
 * Actor
-* Role
 * Action
 * Target resource
 * Target identifier
 * Details
-* Correlation ID
 * Timestamp
-* IP address
+* IP information
+* Correlation information
 
-This creates an audit trail for important administrative operations.
+This provides better accountability and troubleshooting capabilities.
 
 ---
 
-# 🗄️ Database Design
+# 🛡️ Security
 
-Aura uses **MongoDB** through **Mongoose**.
+Security is integrated across the application.
 
-The project contains dedicated models for the major business domains.
+## Password Hashing
+
+Passwords are hashed with:
+
+```text
+bcryptjs
+```
+
+Plain-text passwords should never be stored.
+
+---
+
+## JWT Authentication
+
+Protected resources require a valid JWT.
+
+```text
+Authorization: Bearer <token>
+```
+
+---
+
+## Input Validation
+
+The application uses:
+
+```text
+express-validator
+```
+
+to validate incoming requests.
+
+Validation helps protect against malformed or unexpected input.
+
+---
+
+## Rate Limiting
+
+The backend uses:
+
+```text
+express-rate-limit
+```
+
+to limit excessive requests.
+
+Dedicated limits can be applied to sensitive areas such as:
+
+* Authentication
+* AI requests
+* Orders
+* Reviews
+* Uploads
+* General API traffic
+
+---
+
+## CORS
+
+Cross-Origin Resource Sharing is configured to allow communication between the frontend and backend.
+
+For production, the allowed origin should be restricted to the actual frontend domain.
+
+Example:
+
+```env
+CORS_ORIGIN=https://your-frontend.vercel.app
+```
+
+---
+
+## Environment Secrets
+
+Sensitive values should never be committed to Git.
+
+Examples:
+
+```text
+MONGO_URI
+JWT_SECRET
+GEMINI_API_KEY
+PAYMENT_WEBHOOK_SECRET
+```
+
+Use environment variables or your hosting provider's secret-management system.
+
+---
+
+# 🗄️ Database Architecture
+
+Aura uses **MongoDB with Mongoose**.
+
+### Main Data Models
+
+```text
+User
+Product
+Category
+Order
+Wishlist
+Notification
+Coupon
+StockMovement
+AuditLog
+EmailRecord
+```
+
+### Relationship Overview
 
 ```text
 User
  │
  ├── Orders
  ├── Wishlist
- ├── Notifications
- └── Reviews
+ └── Notifications
 
 Product
  │
@@ -898,48 +1168,36 @@ Order
 
 Inventory
  │
- └── Stock Movements
+ └── StockMovement
 
 Administration
  │
- ├── Audit Logs
- ├── Email Records
- └── Analytics
+ ├── AuditLog
+ └── EmailRecord
 ```
-
-### Main Collections
-
-* `users`
-* `products`
-* `categories`
-* `orders`
-* `wishlists`
-* `notifications`
-* `coupons`
-* `stockmovements`
-* `auditlogs`
-* `emailrecords`
 
 ---
 
-# 🔌 API Overview
+# 🔌 API Architecture
 
-The API is mounted under:
+The backend API is organized under:
 
 ```text
 /api
 ```
 
-### Authentication
+## Authentication
 
-```text
-POST   /api/auth/register
-POST   /api/auth/login
+```http
+POST /api/auth/register
+POST /api/auth/login
 ```
 
-### Products
+---
 
-```text
+## Products
+
+```http
 GET    /api/products
 GET    /api/products/:id
 POST   /api/products
@@ -947,134 +1205,139 @@ PUT    /api/products/:id
 DELETE /api/products/:id
 ```
 
-### Reviews
+---
 
-```text
-GET    /api/products/:productId/reviews
-POST   /api/products/:productId/reviews
-PUT    /api/products/:productId/reviews/:reviewId/moderate
+## Categories
+
+```http
+GET    /api/categories
+POST   /api/categories
+PUT    /api/categories/:id
+DELETE /api/categories/:id
 ```
 
-### Orders
+---
 
-```text
-POST   /api/orders
+## Orders
+
+```http
 GET    /api/orders
-GET    /api/orders/:orderId
-PUT    /api/orders/:orderId/status
-GET    /api/orders/:orderId/invoice
+POST   /api/orders
+GET    /api/orders/:id
+PUT    /api/orders/:id/status
+GET    /api/orders/:id/invoice
 ```
 
-### Wishlist
+---
 
-```text
+## Wishlist
+
+```http
 GET    /api/wishlist
 POST   /api/wishlist
 DELETE /api/wishlist/:productId
 ```
 
-### Inventory
+---
 
-```text
-GET    /api/inventory/summary
-GET    /api/inventory/low-stock
-GET    /api/inventory/stock-movements
-POST   /api/inventory/adjust
+## Notifications
+
+```http
+GET /api/notifications
+PUT /api/notifications/:id/read
+POST /api/notifications/clear-all
 ```
 
-### Notifications
+---
 
-```text
-GET    /api/notifications
-PUT    /api/notifications/:id/read
-POST   /api/notifications/clear-all
+## Inventory
+
+```http
+GET  /api/inventory/summary
+GET  /api/inventory/low-stock
+GET  /api/inventory/stock-movements
+POST /api/inventory/adjust
 ```
 
-### Coupons
+---
 
-```text
+## Coupons
+
+```http
 GET    /api/coupons
 POST   /api/coupons
 POST   /api/coupons/validate
 DELETE /api/coupons/:id
 ```
 
-### AI
+---
 
-```text
-/api/ai
+## AI
+
+```http
+POST /api/ai
 ```
 
-The AI routes provide the backend interface for the Gemini-powered shopping concierge.
+The AI endpoint communicates with Google Gemini from the backend.
 
-### Health Check
+---
 
-```text
+## Health Check
+
+```http
 GET /api/health
 ```
 
-Example response:
-
-```json
-{
-  "status": "ok",
-  "mongoConnected": true,
-  "hasGeminiKey": true,
-  "timestamp": "2026-09-01T00:00:00.000Z"
-}
-```
+This endpoint is also configured as the Render health-check endpoint.
 
 ---
 
 # ⚙️ Environment Variables
 
-Create an environment file for local development.
-
-Example:
+Create a `.env` file in the project root.
 
 ```env
 NODE_ENV=development
+
 PORT=3000
 
 MONGO_URI=mongodb://localhost:27017/aura_boutique
 
-JWT_SECRET=replace_with_a_long_random_secret
+JWT_SECRET=your_secure_jwt_secret
 
 GEMINI_API_KEY=your_gemini_api_key
 
 CORS_ORIGIN=http://localhost:5173
-
-PAYMENT_WEBHOOK_SECRET=your_webhook_secret
 ```
 
-### Production
+### Production Example
 
-Never commit real secrets to Git.
+```env
+NODE_ENV=production
 
-Use your hosting provider's environment-variable management system.
+PORT=3000
 
-Recommended secrets include:
+MONGO_URI=mongodb+srv://<username>:<password>@<cluster>/<database>
 
-```text
-MONGO_URI
-JWT_SECRET
-GEMINI_API_KEY
-PAYMENT_WEBHOOK_SECRET
-CORS_ORIGIN
+JWT_SECRET=your_production_secret
+
+GEMINI_API_KEY=your_production_gemini_key
+
+CORS_ORIGIN=https://your-frontend.vercel.app
 ```
 
 ---
 
-# 📦 Installation
+# 📥 Installation
 
 ## Prerequisites
 
-Make sure you have installed:
+Install the following:
 
 * Node.js 18+
 * npm
-* MongoDB or MongoDB Atlas
 * Git
+* MongoDB or MongoDB Atlas
 
 Optional:
 
@@ -1094,17 +1357,16 @@ cd aura-boutique
 
 ## 2. Install Dependencies
 
-From the project root:
-
 ```bash
 npm install
 ```
 
-If working directly with the frontend:
+For the client separately:
 
 ```bash
 cd Client
 npm install
+cd ..
 ```
 
 ---
@@ -1120,44 +1382,48 @@ Create:
 and configure:
 
 ```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secure_secret
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
 GEMINI_API_KEY=your_gemini_api_key
 CORS_ORIGIN=http://localhost:5173
 ```
 
 ---
 
-# ▶️ Running the Application
+# ▶️ Running Locally
 
-## Development
+## Development Server
 
-The root project is configured to run the application through:
+Run:
 
 ```bash
 npm run dev
 ```
 
-The server starts on:
+The project starts the Node.js server through:
+
+```text
+server.js
+```
+
+The application is available at:
 
 ```text
 http://localhost:3000
 ```
 
-The Vite development middleware is integrated into the server for development mode.
-
 ---
 
-## Frontend Development
+## Frontend Development Mode
 
-Alternatively:
+You can also run the Vite client directly:
 
 ```bash
 cd Client
 npm run dev
 ```
 
-The Vite development server normally runs on:
+Vite normally provides:
 
 ```text
 http://localhost:5173
@@ -1165,41 +1431,29 @@ http://localhost:5173
 
 ---
 
-## Production Build
+# 🏗️ Build
 
-Build the frontend using:
+Create a production frontend build:
 
 ```bash
 npm run build
 ```
 
-Then start the server:
-
-```bash
-npm start
-```
+The Vite build generates the production frontend assets.
 
 ---
 
-# 🐳 Docker Deployment
+# 🐳 Docker
 
-The project includes Docker Compose configuration.
+Aura includes Docker Compose configuration.
 
-Start the application using:
+Start the complete environment with:
 
 ```bash
 docker compose up --build
 ```
 
-The application is exposed through:
-
-```text
-http://localhost:3000
-```
-
-MongoDB is provided through a dedicated container.
-
-### Docker Architecture
+The Docker architecture contains:
 
 ```text
 Docker Compose
@@ -1214,7 +1468,19 @@ Docker Compose
     └── MongoDB 7
 ```
 
-Persistent MongoDB data is stored in the:
+The application is exposed on:
+
+```text
+http://localhost:3000
+```
+
+MongoDB is exposed on:
+
+```text
+mongodb://localhost:27017
+```
+
+Persistent database storage uses the:
 
 ```text
 mongo_data
@@ -1224,17 +1490,121 @@ Docker volume.
 
 ---
 
-# ☁️ Render Deployment
+# 🚀 Deployment
 
-The repository includes:
+Aura is designed for a separated cloud architecture:
+
+```text
+                     INTERNET
+                        │
+                        ▼
+               ┌────────────────┐
+               │     Vercel     │
+               │    Frontend    │
+               └───────┬────────┘
+                       │
+                       │ HTTPS
+                       ▼
+               ┌────────────────┐
+               │     Render     │
+               │    Backend     │
+               │ Node + Express │
+               └───────┬────────┘
+                       │
+                       │ MongoDB URI
+                       ▼
+               ┌────────────────┐
+               │ MongoDB Atlas  │
+               │    Database    │
+               └────────────────┘
+```
+
+### Deployment Responsibilities
+
+| Platform      | Responsibility                        |
+| ------------- | ------------------------------------- |
+| Vercel        | React/Vite frontend                   |
+| Render        | Node.js/Express backend               |
+| MongoDB Atlas | Cloud database                        |
+| Docker        | Containerized local/server deployment |
+
+---
+
+# ▲ Vercel Deployment
+
+The frontend can be deployed using **Vercel**.
+
+The project contains:
+
+```text
+Client/vercel.json
+```
+
+and a root-level Vercel configuration.
+
+### Recommended Vercel Settings
+
+```text
+Framework: Vite
+Root Directory: Client
+Build Command: npm run build
+Output Directory: dist
+```
+
+### Deployment
+
+From Vercel:
+
+1. Import the GitHub repository.
+2. Set the project root to `Client`.
+3. Configure the build command.
+4. Configure the output directory.
+5. Deploy.
+
+---
+
+## Vercel Environment Variables
+
+Configure the backend API URL if the frontend requires a runtime API configuration.
+
+Example:
+
+```env
+VITE_API_URL=https://your-backend.onrender.com/api
+```
+
+The exact variable name should match the frontend configuration used by the application.
+
+---
+
+# 🟢 Render Deployment
+
+The backend is configured for Render through:
 
 ```text
 render.yaml
 ```
 
-for Render deployment.
+The configuration defines:
 
-The backend is configured as a Node.js web service.
+```yaml
+services:
+  - type: web
+    name: aura-boutique-backend
+    env: node
+```
+
+The configured build command is:
+
+```text
+npm install
+```
+
+The configured start command is:
+
+```text
+node server.js
+```
 
 The health check is:
 
@@ -1242,349 +1612,510 @@ The health check is:
 /api/health
 ```
 
-### Recommended Render Variables
+---
 
-Configure:
+## Render Environment Variables
+
+Configure the following in Render:
 
 ```text
 NODE_ENV=production
-MONGO_URI=<MongoDB Atlas URI>
-JWT_SECRET=<generated secure secret>
+MONGO_URI=<MongoDB Atlas connection string>
+JWT_SECRET=<secure generated secret>
 GEMINI_API_KEY=<Gemini API key>
-CORS_ORIGIN=<frontend URL>
+CORS_ORIGIN=<Vercel frontend URL>
 ```
 
-For production, avoid using:
+### Recommended Production CORS
+
+Instead of:
 
 ```text
 CORS_ORIGIN=*
 ```
 
-when the frontend has a known domain.
-
-Instead use:
+use the actual frontend domain:
 
 ```text
-CORS_ORIGIN=https://your-frontend-domain.com
+CORS_ORIGIN=https://your-project.vercel.app
 ```
+
+This is recommended for production security.
 
 ---
 
-# ▲ Vercel Deployment
+# 🍃 MongoDB Atlas
 
-The `Client` directory contains a Vercel configuration.
+For production deployment, MongoDB Atlas can be used as the database provider.
 
-The recommended architecture is:
+### Setup
 
-```text
-                  Internet
-                     │
-                     ▼
-              ┌──────────────┐
-              │    Vercel    │
-              │   Frontend   │
-              └──────┬───────┘
-                     │
-                     │ HTTPS API
-                     ▼
-              ┌──────────────┐
-              │    Render    │
-              │   Backend    │
-              └──────┬───────┘
-                     │
-                     ▼
-              ┌──────────────┐
-              │ MongoDB Atlas│
-              └──────────────┘
-```
-
-The frontend should be configured with the deployed backend API URL.
-
----
-
-# 🔍 Health Monitoring
-
-The backend exposes a dedicated health endpoint:
+1. Create a MongoDB Atlas cluster.
+2. Create a database user.
+3. Configure network access.
+4. Copy the MongoDB connection string.
+5. Set it as `MONGO_URI` in Render.
+6. Deploy the backend.
+7. Verify:
 
 ```text
 GET /api/health
 ```
 
-It provides basic information about:
+### Example URI
 
-* API availability
-* MongoDB connection
-* Gemini API key configuration
-* Server timestamp
+```text
+mongodb+srv://<username>:<password>@<cluster>.mongodb.net/aura_boutique
+```
 
-This endpoint can be used by deployment platforms for health checks.
+Never commit the connection string to Git.
 
 ---
 
-# 🧪 Development Workflow
+# 🔐 Production Configuration
 
-A recommended development workflow is:
+Before deploying the application publicly, verify:
 
-```text
-1. Create feature branch
-        ↓
-2. Implement feature
-        ↓
-3. Validate frontend
-        ↓
-4. Validate backend
-        ↓
-5. Test API
-        ↓
-6. Test authentication
-        ↓
-7. Test real-time functionality
-        ↓
-8. Test production build
-        ↓
-9. Commit changes
-        ↓
-10. Push branch
-        ↓
-11. Review / Merge
+### Security
+
+* Use a strong `JWT_SECRET`.
+* Use HTTPS.
+* Restrict CORS.
+* Keep Gemini credentials server-side.
+* Keep MongoDB credentials private.
+* Use production environment variables.
+* Enable appropriate rate limits.
+* Validate all user input.
+* Do not commit `.env` files.
+
+### Database
+
+* Use MongoDB Atlas.
+* Configure appropriate network access.
+* Create a dedicated database user.
+* Use strong database credentials.
+* Monitor database usage.
+
+### Payments
+
+Replace any development payment simulation with a real PCI-compliant payment provider.
+
+### File Uploads
+
+Production uploads should enforce:
+
+* File size limits
+* MIME-type validation
+* Secure storage
+* Image processing
+* Appropriate access control
+
+---
+
+# 🩺 Health Monitoring
+
+The backend exposes:
+
+```http
+GET /api/health
 ```
 
-Recommended branch naming:
+This endpoint can be used by Render or external monitoring systems.
+
+Example:
+
+```json
+{
+  "status": "ok",
+  "mongoConnected": true,
+  "hasGeminiKey": true,
+  "timestamp": "2026-09-02T00:00:00.000Z"
+}
+```
+
+---
+
+# 🔄 Development Workflow
+
+Recommended workflow:
+
+```text
+Create Feature
+     ↓
+Create Branch
+     ↓
+Develop
+     ↓
+Validate
+     ↓
+Test Frontend
+     ↓
+Test Backend
+     ↓
+Test Authentication
+     ↓
+Test API
+     ↓
+Test Socket.IO
+     ↓
+Build Production Version
+     ↓
+Commit
+     ↓
+Push
+     ↓
+Deploy
+```
+
+### Recommended Branch Names
 
 ```text
 feature/product-search
-feature/ai-concierge
+feature/ai-assistant
 feature/order-management
+feature/inventory
+feature/notifications
+feature/analytics
 fix/authentication
-fix/inventory
-security/rate-limiting
+fix/checkout
+security/api-protection
 ```
 
 ---
 
-# 📈 Scalability Considerations
+# 🧪 Testing Strategy
 
-The current architecture provides a strong foundation for scaling.
+A production-ready evolution of the project should include automated testing at multiple levels.
 
-Potential scaling strategy:
+### Unit Testing
+
+Test:
+
+* Services
+* Utility functions
+* Validation logic
+* Authentication helpers
+
+### API Testing
+
+Test:
+
+* Authentication
+* Product CRUD
+* Orders
+* Wishlist
+* Coupons
+* Inventory
+* Notifications
+* AI endpoint
+
+### Security Testing
+
+Test:
+
+* Invalid JWT
+* Expired JWT
+* Unauthorized roles
+* Invalid input
+* Rate limits
+* CORS
+* Malicious payloads
+
+### End-to-End Testing
+
+Recommended customer workflow:
+
+```text
+Register
+   ↓
+Login
+   ↓
+Browse Products
+   ↓
+Search
+   ↓
+Product Details
+   ↓
+Add to Cart
+   ↓
+Checkout
+   ↓
+Create Order
+   ↓
+View Order
+   ↓
+Receive Notification
+```
+
+---
+
+# 📈 Scalability
+
+The architecture can be extended to support horizontal scaling.
 
 ```text
                     Load Balancer
                          │
-          ┌──────────────┼──────────────┐
-          ▼              ▼              ▼
-      Backend 1      Backend 2      Backend 3
-          │              │              │
-          └──────────────┼──────────────┘
+             ┌───────────┼───────────┐
+             ▼           ▼           ▼
+         Backend 1   Backend 2   Backend 3
+             │           │           │
+             └───────────┼───────────┘
                          │
-                    MongoDB Atlas
+                         ▼
+                   MongoDB Atlas
 ```
 
-For larger deployments, additional infrastructure can be introduced for:
+Potential scalability improvements include:
 
-* Redis-based caching
-* Distributed Socket.IO adapters
-* Background job processing
-* CDN delivery
-* Image optimization
-* Dedicated email queues
-* Observability
+* Redis caching
+* Distributed Socket.IO adapter
+* Background workers
+* Queue-based email processing
+* CDN image delivery
+* Database indexing
 * Horizontal backend scaling
+* Dedicated monitoring infrastructure
 
 ---
 
-# 🔒 Production Security Recommendations
-
-Before using Aura in a real commercial environment, the following improvements are recommended:
-
-### 1. Use Strong Secrets
-
-Generate cryptographically secure values for:
-
-```text
-JWT_SECRET
-PAYMENT_WEBHOOK_SECRET
-```
-
-Never use development fallback secrets.
-
-### 2. Restrict CORS
-
-Use the exact production frontend origin instead of:
-
-```text
-*
-```
-
-### 3. Use HTTPS
-
-Production traffic should use TLS/HTTPS.
-
-### 4. Production Payment Provider
-
-Replace the payment simulation with a PCI-compliant payment provider.
-
-### 5. Secure File Uploads
-
-Production deployments should enforce:
-
-* MIME validation
-* File size limits
-* Image processing
-* Malware scanning where appropriate
-* Secure cloud storage
-
-### 6. Secure Cookies / Token Strategy
-
-For production authentication, consider secure HTTP-only cookies or another robust token strategy depending on the deployment architecture.
-
-### 7. Centralized Logging
-
-Integrate a production observability stack for:
-
-* Application logs
-* Error tracking
-* Performance monitoring
-* Security events
-* Audit events
-
----
-
-# 🧭 Future Improvements
+# 🔮 Future Improvements
 
 Potential future enhancements include:
 
-* Stripe production integration
+* Stripe integration
+* PayPal production integration
 * Redis caching
-* Advanced product recommendation engine
-* AI-powered semantic product search
+* Advanced AI product recommendations
+* Semantic product search
 * AI-generated product descriptions
+* Customer personalization
 * Multi-language support
 * Multi-currency support
 * Advanced analytics dashboards
-* Customer segmentation
-* Order tracking integration
-* Cloudinary or S3 image pipelines
-* Background job queues
-* Email queue processing
 * Two-factor authentication
-* Password reset workflow
 * OAuth authentication
+* Password recovery
 * Advanced RBAC
 * Automated testing
-* CI/CD pipelines
-* Comprehensive API documentation with OpenAPI/Swagger
-* Monitoring with Prometheus/Grafana
+* GitHub Actions CI/CD
+* Swagger/OpenAPI documentation
+* Prometheus monitoring
+* Grafana dashboards
 * Centralized error tracking
 * Kubernetes deployment
+* Cloudinary/S3 image management
+* Background job queues
 
 ---
 
-# 📊 Architecture Summary
+# 📊 Project Highlights
 
-Aura & Co. Boutique can be summarized as:
+| Category            | Implementation         |
+| ------------------- | ---------------------- |
+| Frontend            | React 19               |
+| Build Tool          | Vite 6                 |
+| Language            | JavaScript             |
+| Styling             | Tailwind CSS 4         |
+| State Management    | Redux Toolkit          |
+| API State           | RTK Query architecture |
+| HTTP Client         | Axios                  |
+| Backend             | Node.js + Express      |
+| Database            | MongoDB                |
+| ODM                 | Mongoose               |
+| Authentication      | JWT                    |
+| Password Security   | bcryptjs               |
+| AI                  | Google Gemini          |
+| Real-Time           | Socket.IO              |
+| Validation          | express-validator      |
+| Rate Limiting       | express-rate-limit     |
+| E-Commerce          | Full shopping workflow |
+| Wishlist            | Implemented            |
+| Reviews             | Implemented            |
+| Inventory           | Implemented            |
+| Orders              | Implemented            |
+| Coupons             | Implemented            |
+| Notifications       | Implemented            |
+| Invoices            | Implemented            |
+| Email Service       | Implemented            |
+| Audit Logs          | Implemented            |
+| Analytics           | Implemented            |
+| Docker              | Supported              |
+| Frontend Deployment | Vercel                 |
+| Backend Deployment  | Render                 |
+| Cloud Database      | MongoDB Atlas          |
+
+---
+
+# 🧩 Architecture Summary
 
 ```text
-┌─────────────────────────────────────────────┐
-│              AURA & CO. BOUTIQUE            │
-├─────────────────────────────────────────────┤
-│                                             │
-│  React + Vite + TailwindCSS                 │
-│              │                              │
-│              ▼                              │
-│       Redux Toolkit / RTK Query             │
-│              │                              │
-│              ▼                              │
-│       Axios + Socket.IO                     │
-│              │                              │
-├──────────────┼──────────────────────────────┤
-│              ▼                              │
-│       Node.js + Express                     │
-│              │                              │
-│    ┌─────────┼──────────┐                   │
-│    ▼         ▼          ▼                   │
-│  Auth      Business     AI                  │
-│  Layer     Services    Gemini               │
-│    │         │          │                   │
-│    └─────────┼──────────┘                   │
-│              ▼                              │
-│           Mongoose                          │
-│              │                              │
-│              ▼                              │
-│           MongoDB                           │
-│                                             │
-└─────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│                    AURA & CO. BOUTIQUE                   │
+├──────────────────────────────────────────────────────────┤
+│                                                          │
+│                     FRONTEND                             │
+│                                                          │
+│        React 19 + Vite + Tailwind CSS                    │
+│                         │                                │
+│              Redux Toolkit / RTK Query                   │
+│                         │                                │
+│                 Axios + Socket.IO                        │
+│                         │                                │
+├─────────────────────────┼────────────────────────────────┤
+│                         ▼                                │
+│                     BACKEND                              │
+│                                                          │
+│               Node.js + Express.js                       │
+│                         │                                │
+│        ┌────────────────┼────────────────┐               │
+│        ▼                ▼                ▼               │
+│      Auth          E-Commerce           AI               │
+│        │                │                │               │
+│        │                │          Google Gemini         │
+│        │                │                                │
+│        └────────────────┼────────────────┘               │
+│                         ▼                                │
+│                     Mongoose                             │
+│                         │                                │
+├─────────────────────────┼────────────────────────────────┤
+│                         ▼                                │
+│                  MongoDB / Atlas                         │
+│                                                          │
+└──────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-# 🏆 Project Highlights
+# ☁️ Deployment Architecture Summary
 
-| Area               | Implementation     |
-| ------------------ | ------------------ |
-| Frontend           | React 19 + Vite    |
-| Styling            | Tailwind CSS       |
-| State Management   | Redux Toolkit      |
-| API State          | RTK Query          |
-| Backend            | Node.js + Express  |
-| Database           | MongoDB + Mongoose |
-| Authentication     | JWT                |
-| Password Security  | bcryptjs           |
-| AI                 | Google Gemini      |
-| Real-Time          | Socket.IO          |
-| Validation         | express-validator  |
-| API Protection     | express-rate-limit |
-| Orders             | Implemented        |
-| Wishlist           | Implemented        |
-| Reviews            | Implemented        |
-| Coupons            | Implemented        |
-| Inventory          | Implemented        |
-| Notifications      | Implemented        |
-| Audit Logging      | Implemented        |
-| Invoice Generation | Implemented        |
-| Email Service      | Implemented        |
-| Docker             | Supported          |
-| Render             | Configured         |
-| Vercel             | Configured         |
+```text
+                     GitHub
+                        │
+          ┌─────────────┴─────────────┐
+          │                           │
+          ▼                           ▼
+       Vercel                       Render
+          │                           │
+     React/Vite                Node/Express
+     Frontend                    Backend
+          │                           │
+          └─────────────┬─────────────┘
+                        │
+                        ▼
+                 MongoDB Atlas
+                     Database
+```
 
 ---
 
 # 👨‍💻 Author
 
-**Yassine Kaltoum**
+## Yassine Kaltoum
 
-Software & Network Engineering Expert
+**Software & Network Engineering Expert**
+
 Software Engineering Master's Student
 
-### Areas of Expertise
+### Expertise
 
-* Software Engineering
 * Full-Stack Web Development
+* Software Engineering
 * Network Engineering
 * Cybersecurity
 * System Architecture
 * UI/UX Design
 * Web Design
-* AI Integration
+* Artificial Intelligence Integration
+
+---
+
+# 🎓 Project Purpose
+
+Aura & Co. Boutique demonstrates the integration of modern web development technologies into a complete full-stack application.
+
+The project combines:
+
+```text
+Modern UI/UX
++
+Full-Stack Development
++
+Database Engineering
++
+Authentication
++
+Cybersecurity
++
+Artificial Intelligence
++
+Real-Time Communication
++
+Cloud Deployment
++
+Containerization
+```
+
+It therefore serves as a practical demonstration of modern software engineering principles across the frontend, backend, database, security, AI and DevOps layers.
 
 ---
 
 # 📜 License
 
-This project is intended for educational, portfolio, demonstration, and development purposes.
+This project is intended for educational, portfolio, demonstration and development purposes.
 
-If you intend to use the project commercially, review and define an appropriate software license and ensure that all third-party assets, APIs, libraries, product images, and services are used according to their respective licenses and terms.
+Before commercial use, ensure that:
+
+* Third-party dependencies comply with their licenses.
+* Product images are properly licensed.
+* AI services comply with their terms.
+* Payment integrations comply with applicable regulations.
+* Appropriate commercial licensing is applied to the project.
+
+---
+
+# ⭐ Acknowledgements
+
+This project was developed using a modern ecosystem of open-source and cloud technologies, including:
+
+* React
+* Vite
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* Redux Toolkit
+* Socket.IO
+* Tailwind CSS
+* Google Gemini
+* Docker
+* Vercel
+* Render
 
 ---
 
 <div align="center">
 
-### ✨ Aura & Co. Boutique
+# ✨ Aura & Co. Boutique
 
-**Discover. Personalize. Shop.**
+### Discover. Personalize. Shop.
 
-Built with modern web technologies, AI, and a security-conscious full-stack architecture.
+**A modern AI-powered full-stack e-commerce experience.**
 
-⭐ If you find this project useful, consider giving the repository a star.
+<br>
+
+<img src="https://img.shields.io/badge/Made%20with-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Made with JavaScript">
+
+<img src="https://img.shields.io/badge/AI-Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini">
+
+<img src="https://img.shields.io/badge/Frontend-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+
+<img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" alt="Render">
+
+<img src="https://img.shields.io/badge/Database-MongoDB%20Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Atlas">
+
+<br><br>
+
+⭐ **If you find this project useful, consider giving the repository a star.**
 
 </div>
