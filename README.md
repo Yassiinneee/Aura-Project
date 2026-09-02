@@ -67,6 +67,17 @@ The application combines a modern React frontend with a Node.js/Express backend,
 
 The architecture is designed to support both **customer-facing commerce operations** and **administrative business workflows**.
 
+---
+# 🌐 Live Demo
+
+The Aura Boutique e-commerce platform is deployed and publicly accessible through Vercel.
+
+**Production Website:**
+
+👉 https://aura-projectt-nine.vercel.app/
+
+---
+
 ### Core Concept
 
 Aura & Co. focuses on three main pillars:
